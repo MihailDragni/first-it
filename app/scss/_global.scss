@@ -61,7 +61,7 @@ body {
 }
 
 .services-card {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -69,10 +69,16 @@ body {
   border-radius: 5px;
   &__img {
     border-radius: 5px;
+    object-fit: cover;
   }
 
   &__body {
     padding: 35px 0 50px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
@@ -84,7 +90,7 @@ body {
 
   &__list {
     margin-bottom: 30px;
-    flex: 1 1 auto;
+    flex-direction: 1 1 auto;
   }
 
   &__item {
@@ -93,13 +99,13 @@ body {
     padding-left: 20px;
     position: relative;
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 2px;
     }
 
     &::before {
       content: '';
-      width: 4px;
-      height: 4px;
+      width: 5px;
+      height: 5px;
       background-color: $dark;
       border-radius: 50%;
       position: absolute;
@@ -110,11 +116,9 @@ body {
   }
 
   &__button {
-    display: block;
-    padding: 18px 0;
     width: 308px;
+    padding: 18px 0;
   }
-
 }
 
 // .hidden {

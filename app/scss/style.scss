@@ -314,7 +314,11 @@
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(3, 382px);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+  }
+
+  &__item {
+    display: flex;
   }
 }
